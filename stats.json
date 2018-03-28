@@ -1,0 +1,68 @@
+{
+  "assetsByChunkName": {
+    "path---my-second-post": [
+      "path---my-second-post-fe9267b0d54ac74b2bc4.js",
+      "path---my-second-post-fe9267b0d54ac74b2bc4.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-f355d2aae2893701430f.js",
+      "component---src-pages-index-js-f355d2aae2893701430f.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "component---node-modules-gatsby-plugin-offline-app-shell-js": [
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
+    ],
+    "component---src-templates-blog-post-js": [
+      "component---src-templates-blog-post-js-38fb534b4af13a29e143.js",
+      "component---src-templates-blog-post-js-38fb534b4af13a29e143.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-512c2f5dbbe69deb0a3e.js",
+      "component---src-layouts-index-js-512c2f5dbbe69deb0a3e.js.map"
+    ],
+    "path---hi-folks": [
+      "path---hi-folks-5603c1a2c13a8950593a.js",
+      "path---hi-folks-5603c1a2c13a8950593a.js.map"
+    ],
+    "path---index": [
+      "path---index-fb7920b02446c87b3d44.js",
+      "path---index-fb7920b02446c87b3d44.js.map"
+    ],
+    "path---hello-world": [
+      "path---hello-world-0a0673368927a5792f0f.js",
+      "path---hello-world-0a0673368927a5792f0f.js.map"
+    ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
+      "component---src-pages-404-js-4503918ea3a16cfcdb75.js.map"
+    ],
+    "commons": [
+      "commons-052854b14b2d9cebb713.js",
+      "build-js-styles.css",
+      "commons-052854b14b2d9cebb713.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---404-html": [
+      "path---404-html-a0e39f21c11f6a62c5ab.js",
+      "path---404-html-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---offline-plugin-app-shell-fallback": [
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "app": [
+      "app-a4ec6f45c5f9433c9249.js",
+      "build-js-styles.css",
+      "app-a4ec6f45c5f9433c9249.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---404": [
+      "path---404-a0e39f21c11f6a62c5ab.js",
+      "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ]
+  }
+}
