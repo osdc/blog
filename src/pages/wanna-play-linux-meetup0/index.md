@@ -1,6 +1,6 @@
 ---
 title: Wanna Play Linux Meetup
-date: "2018-09-015T23:46:37.121Z"
+date: "2018-09-20T23:46:37.121Z"
 ---
 
 >One OS to rule them all,
