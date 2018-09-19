@@ -1,6 +1,6 @@
 ---
 title: How to Open Source!
-date: "2015-05-06T23:46:37.121Z"
+date: "2018-08-20T23:46:37.121Z"
 ---
 
 #### What is Open Source?
@@ -8,7 +8,7 @@ date: "2015-05-06T23:46:37.121Z"
 #### How to step into Open-Source Development?
 
 These are some of the simple yet daunting questions that many people have in mind. Some question up while the rest don't even care to understand it.And so, in order to remove this confusion or dilemma of the community members,a meetup was organized on the agenda 
-"How to Open Source!"
+"How to Open Source!" on 14th September,2018.
 
 An integral part of organizing meetups is to make the community members interact and network with each other.So,the meetup started with an introduction part where each member has to introduce himself/herself and the technology he/she is working on/interested to work on.
 
