@@ -3,7 +3,7 @@ title: "Custom Live Ubuntu"
 date: 2018-09-14T18:12:36+05:30
 ---
 
-This BLOG is about making a live CD/DVD from the main system on your hard drive. This is useful if you want to build a clean live CD, or if you want to build a minimal rescue cd. We used it to create a beginner friendly wargame to introduce **Linux** to everyone. The theame was similar to that of [Bandit](http://overthewire.org/wargames/bandit) with very elementary linux commands and only 11 levels.
+This blog is about making a live CD/DVD from the main system on your hard drive. This is useful if you want to build a clean live CD, or if you want to build a minimal rescue CD. We used it to create a beginner friendly wargame to introduce **Linux** to everyone. The theame was similar to that of [Bandit](http://overthewire.org/wargames/bandit) with very elementary Linux commands and only 11 levels.
 
 **If interested can download the .iso from [here](https://drive.google.com/open?id=1AkpUmuFQIl4HccCu2H4BLF3XqLJbffUP) and play**
 
@@ -33,26 +33,26 @@ The directory tree of the live CD/DVD we are going to create is going to look li
 |--------md5sum.txt 
 ```
 
-  * /casper/filesystem.${FORMAT}: This is the container of the linux filesystem we are going to copy from our harddisk. It is usually a compressed filesystem like squahsfs.
+  * `/casper/filesystem.${FORMAT}`: This is the container of the linux filesystem we are going to copy from our harddisk. It is usually a compressed filesystem like squashfs.
 
-  * /casper/filesystem.manifest: This file is optional. You only need it if you decide to include the Ubuntu installer in the CD. The purpose of this file will be explained later.
+  * `/casper/filesystem.manifest`: This file is optional. You only need it if you decide to include the Ubuntu installer in the CD. The purpose of this file will be explained later.
 
-  * /casper/filesystem.manifest-desktop: This file is optional. You only need it if you decide to include the Ubuntu installer in the CD. The purpose of this file will be explained later.
+  * `/casper/filesystem.manifest-desktop`: This file is optional. You only need it if you decide to include the Ubuntu installer in the CD. The purpose of this file will be explained later.
 
-  * /casper/vmlinuz: The linux kernel. This is copied form the linux filesystem.
+  * `/casper/vmlinuz`: The linux kernel. This is copied form the linux filesystem.
 
-  * /casper/initrd.img: the initramfs that contain the customizations necessary for the live CD/DVD.
+  * `/casper/initrd.img`: the initramfs that contain the customizations necessary for the live CD/DVD.
 
-  * /boot/grub/grub.cfg: File containing boot options for the live CD/DVD.
+  * `/boot/grub/grub.cfg`: File containing boot options for the live CD/DVD.
 
-  * /boot/memtest86+: Optional file used to test the RAM of the machine form the live CD/DVD.
+  * `/boot/memtest86+`: Optional file used to test the RAM of the machine from the live CD/DVD.
 
-  * /md5sum.txt: Optional file containing checksums for all the files in the CD.
+  * `/md5sum.txt`: Optional file containing checksums for all the files in the CD.
   
 #### Outline of the Steps ####
   * Prepare our work Environment
   * Copy the source system to the target directory
-  * Chroot into the new system and make modifications
+  * `chroot` into the new system and make modifications
   * Prepare the CD directory structure
   * Build the CD/DVD
   
@@ -66,7 +66,7 @@ The directory tree of the live CD/DVD we are going to create is going to look li
 	export FS_DIR=casper
 	```
 	The WORK Directory is where our temporary files and mount point will reside. The CD is the location of the CD tree. FORMAT is the filesystem type. We you are going to use a compressed squashfs. FS_DIR is the location of the actual filesystem image within the cd tree. 
-  * Create the CD and Work Directory Structure
+  * Create the CD and WORK Directory Structure
 
   ```
   sudo mkdir -p ${CD}/{${FS_DIR},boot/grub} ${WORK}/rootfs
@@ -75,26 +75,26 @@ The directory tree of the live CD/DVD we are going to create is going to look li
 
   ```
   sudo apt-get update
-  sudo apt-get install debootstrap zgrub2 xorriso squashfs-tools qemu  (qemu optional)
+  sudo apt-get install debootstrap zgrub2 xorriso squashfs-tools qemu
   ```
-  qemu is (optional). It is only needed for testing the cd before burning it. It can be substituted with any other virtualization software like virtualbox.
-  
-#### Preparing Your new Filesystem ####
+  qemu is (optional). It is only needed for testing the CD before burning it. It can be substituted with any other virtualization software like VirtualBox.
+ 
+#### Preparing your new filesystem ####
 
 	
 	mkdir ${WORK}/rootfs	
 	sudo debootstrap --include grub-pc,locales --arch amd64 bionic ${WORK}/rootfs http://archive.ubuntu.com/ubuntu
 	
-Here, debootstrap will download, extract and install the base system packages to our target directory. Debootstrap only fetches the base system without a kernel or bootloader, so we'll use the --include option to fetch those too. If you need packages not found in the main repository, you can include packages from contrib and non-free with this option --components main,contrib,non-free
+Here, debootstrap will download, extract and install the base system packages to our target directory. Debootstrap only fetches the base system without a kernel or bootloader, so we'll use the `--include` option to fetch those too. If you need packages not found in the main repository, you can include packages from contrib and non-free with this option `--components` main,contrib,non-free
 
 `Usage: debootstrap --include <additional_packages,comma-separated> --arch <architecture> <release> <target> <mirror>`
 
 Next we'll enter the chroot environment for a moment to complete the second stage of the install.
-	
+```	
 	sudo chroot ${WORK}/rootfs /bin/bash
 	debootstrap --second-stage
 	exit
-	
+```
 
 ##### Preparing the chroot environment #####
 Binding the virtual filesystems. Until your new install is booting on it's own, we'll borrow these from the host.
@@ -182,7 +182,7 @@ apt-get update && apt-get upgrade
      
 Copy the following text into it and save it. 
 
-	  ```
+```
 	  set default="0"
 	  set timeout=10
 
@@ -219,7 +219,7 @@ Copy the following text into it and save it.
 	  set root=(hd0)
 	  chainloader +1
 	  }
-	  ```
+```
 
 #### Build the LIVE CD ####
 Make the .iso file
