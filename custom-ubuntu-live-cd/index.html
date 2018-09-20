@@ -1,0 +1,230 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/blog/component---src-layouts-index-js-394f0fbd1e067a077f08.js" as="script"/><link rel="preload" href="/blog/component---src-templates-blog-post-js-debee7b1f66304271b04.js" as="script"/><link rel="preload" href="/blog/path---custom-ubuntu-live-cd-e25b1ce8a52682fa0ad2.js" as="script"/><link rel="preload" href="/blog/app-1eb825b6ae8e2db16cde.js" as="script"/><link rel="preload" href="/blog/commons-6e82eaae3f56c620a9ec.js" as="script"/><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml"/><title data-react-helmet="true">Custom Live Ubuntu | OSDC Blog</title><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><style id="gatsby-inlined-css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/blog/static/montserrat-latin-100.50d27986.woff2) format("woff2"),url(/blog/static/montserrat-latin-100.5e334eff.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/blog/static/montserrat-latin-100italic.8c070533.woff2) format("woff2"),url(/blog/static/montserrat-latin-100italic.03e19243.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/blog/static/montserrat-latin-200.4343d3d9.woff2) format("woff2"),url(/blog/static/montserrat-latin-200.f2022ecd.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/blog/static/montserrat-latin-200italic.116c4c4b.woff2) format("woff2"),url(/blog/static/montserrat-latin-200italic.89614a60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/blog/static/montserrat-latin-300.d2ad295b.woff2) format("woff2"),url(/blog/static/montserrat-latin-300.3a371ee0.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/blog/static/montserrat-latin-300italic.f6b6bf24.woff2) format("woff2"),url(/blog/static/montserrat-latin-300italic.16521668.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/blog/static/montserrat-latin-400.240a8444.woff2) format("woff2"),url(/blog/static/montserrat-latin-400.b20cc131.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/blog/static/montserrat-latin-400italic.86172bb8.woff2) format("woff2"),url(/blog/static/montserrat-latin-400italic.9405e787.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/blog/static/montserrat-latin-500.fb8d6b71.woff2) format("woff2"),url(/blog/static/montserrat-latin-500.50825d47.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/blog/static/montserrat-latin-500italic.c0a555a4.woff2) format("woff2"),url(/blog/static/montserrat-latin-500italic.635de59c.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/blog/static/montserrat-latin-600.d5615136.woff2) format("woff2"),url(/blog/static/montserrat-latin-600.f300da4f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/blog/static/montserrat-latin-600italic.10f29d13.woff2) format("woff2"),url(/blog/static/montserrat-latin-600italic.2bc37d86.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/blog/static/montserrat-latin-700.7d77e1f0.woff2) format("woff2"),url(/blog/static/montserrat-latin-700.81826529.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/blog/static/montserrat-latin-700italic.1dd2b53f.woff2) format("woff2"),url(/blog/static/montserrat-latin-700italic.c162d257.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/blog/static/montserrat-latin-800.d4e7bf86.woff2) format("woff2"),url(/blog/static/montserrat-latin-800.895aadbf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/blog/static/montserrat-latin-800italic.fc0cbe44.woff2) format("woff2"),url(/blog/static/montserrat-latin-800italic.b3362875.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/blog/static/montserrat-latin-900.c8bdd772.woff2) format("woff2"),url(/blog/static/montserrat-latin-900.1b99ef78.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/blog/static/montserrat-latin-900italic.cb72c1f9.woff2) format("woff2"),url(/blog/static/montserrat-latin-900italic.b78bb9f8.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/blog/static/merriweather-latin-300.f015f1e9.woff2) format("woff2"),url(/blog/static/merriweather-latin-300.92dfe81b.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/blog/static/merriweather-latin-300italic.7fd86b32.woff2) format("woff2"),url(/blog/static/merriweather-latin-300italic.878b76f5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/blog/static/merriweather-latin-400.12dbf4c0.woff2) format("woff2"),url(/blog/static/merriweather-latin-400.1fffad22.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/blog/static/merriweather-latin-400italic.1e0d3e81.woff2) format("woff2"),url(/blog/static/merriweather-latin-400italic.de18d4c4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/blog/static/merriweather-latin-700.dc8fec81.woff2) format("woff2"),url(/blog/static/merriweather-latin-700.d7d2ed8e.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/blog/static/merriweather-latin-700italic.b7b7e5da.woff2) format("woff2"),url(/blog/static/merriweather-latin-700italic.6210a5fc.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/blog/static/merriweather-latin-900.43f870d5.woff2) format("woff2"),url(/blog/static/merriweather-latin-900.8f3806df.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/blog/static/merriweather-latin-900italic.168c1ab2.woff2) format("woff2"),url(/blog/static/merriweather-latin-900italic.ae7778f0.woff) format("woff")}</style></head><body><div id="___gatsby"><div style="max-width:42rem;margin-left:auto;margin-right:auto;padding:2.625rem 1.3125rem;" data-reactroot="" data-reactid="1" data-react-checksum="-468285111"><h3 style="font-family:Montserrat, sans-serif;margin-top:0;margin-bottom:-1.75rem;" data-reactid="2"><a style="box-shadow:none;text-decoration:none;color:inherit;" href="/blog/" data-reactid="3">Open Source Developers&#x27; Blog</a></h3><div data-reactid="4"><!-- react-empty: 5 --><h1 data-reactid="6">Custom Live Ubuntu</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem;" data-reactid="7">September 14, 2018</p><div data-reactid="8"><p>This blog is about making a live CD/DVD from the main system on your hard drive. This is useful if you want to build a clean live CD, or if you want to build a minimal rescue CD. We used it to create a beginner friendly wargame to introduce <strong>Linux</strong> to everyone. The theme was similar to that of <a href="http://overthewire.org/wargames/bandit">Bandit</a> with very elementary Linux commands and only 11 levels.</p>
+<p><strong>If interested can download the .iso from <a href="https://drive.google.com/open?id=1AkpUmuFQIl4HccCu2H4BLF3XqLJbffUP">here</a> and play</strong></p>
+<h5>What is a Live CD/DVD?</h5>
+<p>A live CD/DVD (also live disc, or live operating system) is a complete <strong>bootable computer</strong> installation including operating system which runs directly from a CD-ROM or similar storage device into a computer’s memory, rather than loading from a hard disk drive. It allows users to run an operating system for any purpose without installing it or making any changes to the computer’s configuration. Live CDs can run on a computer without secondary storage, such as a hard disk drive, or with a corrupted hard disk drive or file system, allowing data recovery.</p>
+<h4>Live CD/DVD Structure</h4>
+<p>The directory tree of the live CD/DVD we are going to create is going to look like this: </p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">(CD ROOT) 
+|-------+casper 
+|       |-------filesystem.${FORMAT}     
+|       |-------filesystem.manifest 
+|       |-------filesystem.manifest-desktop 
+|       |-------vmlinuz |       
+|-------initrd.img 
+| 
+|-------+boot 
+|       |--------+grub 
+|       |        
+|       |        |--------grub.cfg
+|       |
+|-------memtest86+ 
+| 
+|--------md5sum.txt </code></pre>
+      </div>
+<ul>
+<li>
+<p><code class="language-text">/casper/filesystem.${FORMAT}</code>: This is the container of the linux filesystem we are going to copy from our harddisk. It is usually a compressed filesystem like squashfs.</p>
+</li>
+<li>
+<p><code class="language-text">/casper/filesystem.manifest</code>: This file is optional. You only need it if you decide to include the Ubuntu installer in the CD. The purpose of this file will be explained later.</p>
+</li>
+<li>
+<p><code class="language-text">/casper/filesystem.manifest-desktop</code>: This file is optional. You only need it if you decide to include the Ubuntu installer in the CD. The purpose of this file will be explained later.</p>
+</li>
+<li>
+<p><code class="language-text">/casper/vmlinuz</code>: The linux kernel. This is copied form the linux filesystem.</p>
+</li>
+<li>
+<p><code class="language-text">/casper/initrd.img</code>: the initramfs that contain the customizations necessary for the live CD/DVD.</p>
+</li>
+<li>
+<p><code class="language-text">/boot/grub/grub.cfg</code>: File containing boot options for the live CD/DVD.</p>
+</li>
+<li>
+<p><code class="language-text">/boot/memtest86+</code>: Optional file used to test the RAM of the machine from the live CD/DVD.</p>
+</li>
+<li>
+<p><code class="language-text">/md5sum.txt</code>: Optional file containing checksums for all the files in the CD.</p>
+</li>
+</ul>
+<h4>Outline of the Steps</h4>
+<ul>
+<li>Prepare our work Environment</li>
+<li>Copy the source system to the target directory</li>
+<li><code class="language-text">chroot</code> into the new system and make modifications</li>
+<li>Prepare the CD directory structure</li>
+<li>Build the CD/DVD</li>
+</ul>
+<h4>Preparing the Environment</h4>
+<ul>
+<li>
+<p>Set some variables</p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">export WORK=~/work
+export CD=~/cd
+export FORMAT=squashfs
+export FS_DIR=casper</code></pre>
+      </div>
+<p>The WORK Directory is where our temporary files and mount point will reside. The CD is the location of the CD tree. FORMAT is the filesystem type. We you are going to use a compressed squashfs. FS_DIR is the location of the actual filesystem image within the cd tree. </p>
+</li>
+<li>
+<p>Create the CD and WORK Directory Structure</p>
+</li>
+</ul>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">sudo mkdir -p ${CD}/{${FS_DIR},boot/grub} ${WORK}/rootfs</code></pre>
+      </div>
+<ul>
+<li>Install some packages on current system</li>
+</ul>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">sudo apt-get update
+sudo apt-get install debootstrap zgrub2 xorriso squashfs-tools qemu</code></pre>
+      </div>
+<p>  qemu is (optional). It is only needed for testing the CD before burning it. It can be substituted with any other virtualization software like VirtualBox.</p>
+<h4>Preparing your new filesystem</h4>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">mkdir ${WORK}/rootfs	
+sudo debootstrap --include grub-pc,locales --arch amd64 bionic ${WORK}/rootfs http://archive.ubuntu.com/ubuntu</code></pre>
+      </div>
+<p>Here, debootstrap will download, extract and install the base system packages to our target directory. Debootstrap only fetches the base system without a kernel or bootloader, so we’ll use the <code class="language-text">--include</code> option to fetch those too. If you need packages not found in the main repository, you can include packages from contrib and non-free with this option <code class="language-text">--components</code> main,contrib,non-free</p>
+<p><code class="language-text">Usage: debootstrap --include &lt;additional_packages,comma-separated&gt; --arch &lt;architecture&gt; &lt;release&gt; &lt;target&gt; &lt;mirror&gt;</code></p>
+<p>Next we’ll enter the chroot environment for a moment to complete the second stage of the install.</p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">	sudo chroot ${WORK}/rootfs /bin/bash
+	debootstrap --second-stage
+	exit</code></pre>
+      </div>
+<h5>Preparing the chroot environment</h5>
+<p>Binding the virtual filesystems. Until your new install is booting on it’s own, we’ll borrow these from the host.</p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">mount -o bind /dev /mnt/deboot/dev
+mount -o bind /proc /mnt/deboot/proc
+mount -o bind /sys /mnt/deboot/sys</code></pre>
+      </div>
+<p>We also need a working network to install necessary packages</p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">sudo cp /etc/resolv.conf ${WORK}/rootfs/etc</code></pre>
+      </div>
+<p>Now let’s enter into the <em>chroot</em> system</p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">sudo chroot ${WORK}/rootfs /bin/bash</code></pre>
+      </div>
+<p>Install packages essential for LIVE CD</p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">apt-get install casper lupin-casper</code></pre>
+      </div>
+<p>Now let’s give your new install a name. If not, your new install won’t have a name, or inherit the name of the host you are installing from and also configure it’s locale</p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">echo &quot;&lt;name-your-host&gt;&quot; &gt; /etc/hostname
+dpkg-reconfigure locales</code></pre>
+      </div>
+<p>Now let’s create a password for root and also add a user and finally <strong>update our system</strong> and exit</p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">passwd
+adduser &lt;your-user-name&gt;
+apt-get update &amp;&amp; apt-get upgrade</code></pre>
+      </div>
+<p><strong>Now if you want to want to make something similar to the mini-war-game that we made you can refer <a href="https://github.com/vaibhavk/wanna-play-linux-meetup-0">this</a> link</strong></p>
+<h4>Prepare the CD directory Structure</h4>
+<ul>
+<li>
+<p>Copy the kernel, the updated initrd and memtest prepared in the chroot:</p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">export kversion=`cd ${WORK}/rootfs/boot &amp;&amp; ls -1 vmlinuz-* | tail -1 | sed &#39;s@vmlinuz-@@&#39;`
+sudo cp -vp ${WORK}/rootfs/boot/vmlinuz-${kversion} ${CD}/${FS_DIR}/vmlinuz
+sudo cp -vp ${WORK}/rootfs/boot/initrd.img-${kversion} ${CD}/${FS_DIR}/initrd.img
+sudo cp -vp ${WORK}/rootfs/boot/memtest86+.bin ${CD}/boot</code></pre>
+      </div>
+</li>
+<li>
+<p>Unmount bind mounted dirs:</p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">sudo umount ${WORK}/rootfs/proc
+sudo umount ${WORK}/rootfs/sys
+sudo umount ${WORK}/rootfs/dev</code></pre>
+      </div>
+</li>
+<li>
+<p>Convert the directory tree into a squashfs: </p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">sudo mksquashfs ${WORK}/rootfs ${CD}/${FS_DIR}/filesystem.${FORMAT} -noappend</code></pre>
+      </div>
+<p><em>Note: Make sure the resulting file size can fit into your live media.</em></p>
+</li>
+<li>
+<p>Make filesystem.size </p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">echo -n $(sudo du -s --block-size=1 ${WORK}/rootfs | tail -1 | awk &#39;{print $1}&#39;) | sudo tee ${CD}/${FS_DIR}/filesystem.size</code></pre>
+      </div>
+</li>
+<li>
+<p>Calculate MD5 </p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">find ${CD} -type f -print0 | xargs -0 md5sum | sed &quot;s@${CD}@.@&quot; | grep -v md5sum.txt | sudo tee -a ${CD}/md5sum.txt</code></pre>
+      </div>
+</li>
+<li>
+<p>Make Grub the bootloader of the CD Make the grub.cfg </p>
+</li>
+</ul>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text"> sudo vim ${CD}/boot/grub/grub.cfg</code></pre>
+      </div>
+<p>Copy the following text into it and save it. </p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">	  set default=&quot;0&quot;
+	  set timeout=10
+
+	  menuentry &quot;Ubuntu&quot; {
+	  linux /casper/vmlinuz boot=casper quiet splash
+	  initrd /casper/initrd.img
+	  }
+
+	  menuentry &quot;Ubuntu in safe mode&quot; {
+	  linux /casper/vmlinuz boot=casper xforcevesa quiet splash
+	  initrd /casper/initrd.img
+	  }
+
+	  menuentry &quot;Ubuntu CLI&quot; {
+	  linux /casper/vmlinuz boot=casper textonly quiet splash
+	  initrd /casper/initrd.img
+	  }
+
+	  menuentry &quot;Ubuntu GUI from RAM&quot; {
+	  linux /casper/vmlinuz boot=casper toram quiet splash
+	  initrd /casper/initrd.img
+	  }
+
+	  menuentry &quot;Check Disk for Defects&quot; {
+	  linux /casper/vmlinuz boot=casper integrity-check quiet splash
+	  initrd /casper/initrd.img
+	  }
+
+	  menuentry &quot;Memory Test&quot; {
+	  linux16 /boot/memtest86+.bin
+	  }
+
+	  menuentry &quot;Boot from the first hard disk&quot; {
+	  set root=(hd0)
+	  chainloader +1
+	  }</code></pre>
+      </div>
+<h4>Build the LIVE CD</h4>
+<p>Make the .iso file</p>
+<div class="gatsby-highlight">
+      <pre class="language-text"><code class="language-text">	sudo grub-mkrescue -o ~/live-cd.iso ${CD}</code></pre>
+      </div>
+<p>Now it’s ready to be made bootable from any device.</p></div><hr style="margin-bottom:1.75rem;" data-reactid="9"/><div style="display:flex;margin-bottom:4.375rem;" data-reactid="10"><img src="/blog/static/osdc.c802ef41.png" alt="Open Source Developers Club" style="margin-right:0.875rem;margin-bottom:0;height:3.5rem;" data-reactid="11"/><p data-reactid="12"><!-- react-text: 13 -->Written by the folks at the<!-- /react-text --><!-- react-text: 14 --> <!-- /react-text --><strong data-reactid="15">Open Source Developers&#x27; Club</strong><!-- react-text: 16 --> who live in and around JIIT, Noida, India.<!-- /react-text --></p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0;" data-reactid="17"><li data-reactid="18"><a rel="prev" href="/blog/hi-folks/" data-reactid="19"><!-- react-text: 20 -->← <!-- /react-text --><!-- react-text: 21 -->New Beginnings<!-- /react-text --></a></li></ul></div><span style="display:block;clear:both;" data-reactid="22"> </span></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-1eb825b6ae8e2db16cde.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js","107818501498521":"component---src-templates-blog-post-js-debee7b1f66304271b04.js","162898551421021":"component---src-pages-404-js-4503918ea3a16cfcdb75.js","35783957827783":"component---src-pages-index-js-96da200e8da8431ec359.js","60335399758886":"path----557518bd178906f8d58a.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","185747565420771":"path---custom-ubuntu-live-cd-e25b1ce8a52682fa0ad2.js","124278555607301":"path---hi-folks-3cce8a5348677443c20f.js","5845135763691":"path---my-second-post-c1428a5a92479959d36c.js","144342403179678":"path---hello-world-a9fa9ae4106a43f6e53a.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","142629428675168":"path---index-7839499a765e074a7662.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-394f0fbd1e067a077f08.js"}/*]]>*/</script><script>
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'undefined', 'auto');
+      }
+      </script><script>/*<![CDATA[*/!function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",["/blog/commons-6e82eaae3f56c620a9ec.js","/blog/app-1eb825b6ae8e2db16cde.js","/blog/path---custom-ubuntu-live-cd-e25b1ce8a52682fa0ad2.js","/blog/component---src-templates-blog-post-js-debee7b1f66304271b04.js","/blog/component---src-layouts-index-js-394f0fbd1e067a077f08.js"])/*]]>*/</script></body></html>
