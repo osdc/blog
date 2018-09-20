@@ -3,7 +3,7 @@ title: "Custom Live Ubuntu"
 date: 2018-09-14T18:12:36+05:30
 ---
 
-This blog is about making a live CD/DVD from the main system on your hard drive. This is useful if you want to build a clean live CD, or if you want to build a minimal rescue CD. We used it to create a beginner friendly wargame to introduce **Linux** to everyone. The theame was similar to that of [Bandit](http://overthewire.org/wargames/bandit) with very elementary Linux commands and only 11 levels.
+This blog is about making a live CD/DVD from the main system on your hard drive. This is useful if you want to build a clean live CD, or if you want to build a minimal rescue CD. We used it to create a beginner friendly wargame to introduce **Linux** to everyone. The theme was similar to that of [Bandit](http://overthewire.org/wargames/bandit) with very elementary Linux commands and only 11 levels.
 
 **If interested can download the .iso from [here](https://drive.google.com/open?id=1AkpUmuFQIl4HccCu2H4BLF3XqLJbffUP) and play**
 
