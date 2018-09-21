@@ -1,6 +1,6 @@
 ---
 title: How to Open Source!
-date: "2018-08-20T23:46:37.121Z"
+date: "2018-09-20T23:46:37.121Z"
 ---
 
 #### What is Open Source?
