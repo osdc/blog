@@ -1,9 +1,5 @@
 {
   "assetsByChunkName": {
-    "path---my-second-post": [
-      "path---my-second-post-c1428a5a92479959d36c.js",
-      "path---my-second-post-c1428a5a92479959d36c.js.map"
-    ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-96da200e8da8431ec359.js",
       "component---src-pages-index-js-96da200e8da8431ec359.js.map"
@@ -24,21 +20,13 @@
       "component---src-layouts-index-js-394f0fbd1e067a077f08.js",
       "component---src-layouts-index-js-394f0fbd1e067a077f08.js.map"
     ],
-    "path---hi-folks": [
-      "path---hi-folks-cd4b6c1f8a2f71250585.js",
-      "path---hi-folks-cd4b6c1f8a2f71250585.js.map"
-    ],
     "path---index": [
-      "path---index-95ac5aa5aeb67eb3a5ba.js",
-      "path---index-95ac5aa5aeb67eb3a5ba.js.map"
-    ],
-    "path---hello-world": [
-      "path---hello-world-a9fa9ae4106a43f6e53a.js",
-      "path---hello-world-a9fa9ae4106a43f6e53a.js.map"
+      "path---index-5d59a8c8990ad688a92e.js",
+      "path---index-5d59a8c8990ad688a92e.js.map"
     ],
     "path---open-source-m-1": [
-      "path---open-source-m-1-621f56d8afa8a928520e.js",
-      "path---open-source-m-1-621f56d8afa8a928520e.js.map"
+      "path---open-source-m-1-2e4a85ca94b08896542f.js",
+      "path---open-source-m-1-2e4a85ca94b08896542f.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
@@ -55,21 +43,21 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---custom-ubuntu-live-cd": [
-      "path---custom-ubuntu-live-cd-78299075edeea122205b.js",
-      "path---custom-ubuntu-live-cd-78299075edeea122205b.js.map"
+      "path---custom-ubuntu-live-cd-8c8c431ee51572c133bc.js",
+      "path---custom-ubuntu-live-cd-8c8c431ee51572c133bc.js.map"
     ],
     "path---wanna-play-linux-meetup-0": [
-      "path---wanna-play-linux-meetup-0-74869baf54eceda8a94e.js",
-      "path---wanna-play-linux-meetup-0-74869baf54eceda8a94e.js.map"
+      "path---wanna-play-linux-meetup-0-7cda994be1166349b1f1.js",
+      "path---wanna-play-linux-meetup-0-7cda994be1166349b1f1.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-7a6415286431acf8c259.js",
+      "app-8ea09fc20ab8669e5fdb.js",
       "build-js-styles.css",
-      "app-7a6415286431acf8c259.js.map",
+      "app-8ea09fc20ab8669e5fdb.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
