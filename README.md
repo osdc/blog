@@ -7,3 +7,5 @@ Install this starter (assuming Gatsby is installed) by running from your CLI:
 
 ## Running in development
 `gatsby develop`
+
+Please feel free to contribute to this blog
