@@ -5,7 +5,7 @@ date: 2018-09-14T18:12:36+05:30
 
 This blog is about making a live CD/DVD from the main system on your hard drive. This is useful if you want to build a clean live CD, or if you want to build a minimal rescue CD. We used it to create a beginner friendly wargame to introduce **Linux** to everyone. The theme was similar to that of [Bandit](http://overthewire.org/wargames/bandit) with very elementary Linux commands and only 11 levels.
 
-**If interested can download the .iso from [here](https://drive.google.com/open?id=1AkpUmuFQIl4HccCu2H4BLF3XqLJbffUP) and play**
+**If interested, you can download the .iso from [here](https://drive.google.com/open?id=1AkpUmuFQIl4HccCu2H4BLF3XqLJbffUP) and play**
 
 ##### What is a Live CD/DVD? #####
 
@@ -33,7 +33,7 @@ The directory tree of the live CD/DVD we are going to create is going to look li
 |--------md5sum.txt 
 ```
 
-  * `/casper/filesystem.${FORMAT}`: This is the container of the linux filesystem we are going to copy from our harddisk. It is usually a compressed filesystem like squashfs.
+  * `/casper/filesystem.${FORMAT}`: This is the container of the linux filesystem we are going to copy from our hard disk. It is usually a compressed filesystem like squashfs.
 
   * `/casper/filesystem.manifest`: This file is optional. You only need it if you decide to include the Ubuntu installer in the CD. The purpose of this file will be explained later.
 
@@ -47,7 +47,7 @@ The directory tree of the live CD/DVD we are going to create is going to look li
 
   * `/boot/memtest86+`: Optional file used to test the RAM of the machine from the live CD/DVD.
 
-  * `/md5sum.txt`: Optional file containing checksums for all the files in the CD.
+  * `/md5sum.txt`: Optional file containing checksums for all the files in the CD/DVD.
   
 #### Outline of the Steps ####
   * Prepare our work Environment
@@ -65,7 +65,7 @@ The directory tree of the live CD/DVD we are going to create is going to look li
 	export FORMAT=squashfs
 	export FS_DIR=casper
 	```
-	The WORK Directory is where our temporary files and mount point will reside. The CD is the location of the CD tree. FORMAT is the filesystem type. We you are going to use a compressed squashfs. FS_DIR is the location of the actual filesystem image within the cd tree. 
+	The WORK Directory is where our temporary files and mount point will reside. The CD is the location of the CD tree. FORMAT is the filesystem type. We are going to use a compressed squashfs. FS_DIR is the location of the actual filesystem image within the cd tree. 
   * Create the CD and WORK Directory Structure
 
   ```
@@ -85,7 +85,7 @@ The directory tree of the live CD/DVD we are going to create is going to look li
 	mkdir ${WORK}/rootfs	
 	sudo debootstrap --include grub-pc,locales --arch amd64 bionic ${WORK}/rootfs http://archive.ubuntu.com/ubuntu
 	
-Here, debootstrap will download, extract and install the base system packages to our target directory. Debootstrap only fetches the base system without a kernel or bootloader, so we'll use the `--include` option to fetch those too. If you need packages not found in the main repository, you can include packages from contrib and non-free with this option `--components` main,contrib,non-free
+Here, debootstrap will download, extract and install the base system packages to our target directory. Debootstrap only fetches the base system without a kernel or bootloader, so we'll use the `--include` option to fetch those too. If you need packages not found in the main repository, you can include packages from contrib and non-free with this option `--components` main, contrib, non-free
 
 `Usage: debootstrap --include <additional_packages,comma-separated> --arch <architecture> <release> <target> <mirror>`
 
@@ -136,7 +136,7 @@ passwd
 adduser <your-user-name>
 apt-get update && apt-get upgrade
 ```
-**Now if you want to want to make something similar to the mini-war-game that we made you can refer [this](https://github.com/vaibhavk/wanna-play-linux-meetup-0) link**
+**Now if you want to want to make something similar to the mini-war-game that we made, you can refer [this](https://github.com/vaibhavk/wanna-play-linux-meetup-0) link**
 
 #### Prepare the CD directory Structure ####
   * Copy the kernel, the updated initrd and memtest prepared in the chroot:
