@@ -18,7 +18,7 @@ class Bio extends React.Component {
       >
         <img
           src={logo}
-          alt={`Open Source Developers Club`}
+          alt={`Open Source Developers Community`}
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
@@ -27,9 +27,9 @@ class Bio extends React.Component {
         />
         <p>
           Written by the folks at the{' '}
-          <strong>Open Source Developers' Community</strong> who live in and around JIIT, Noida, India.</p>
-      </div>
-    )
+          <strong>Open Source Developers Community</strong> who live in and around JIIT, Noida, India.</p>
+        </div>
+    ) 
   }
 }
 
