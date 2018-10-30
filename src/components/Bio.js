@@ -30,7 +30,7 @@ class Bio extends React.Component {
           <strong>Open Source Developers Community</strong> who live in and around JIIT, Noida, India.</p>
         </div>
     ) 
+    }
   }
-}
 
 export default Bio
