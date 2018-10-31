@@ -27,10 +27,11 @@ class Bio extends React.Component {
         />
         <p>
           Written by the folks at the{' '}
-          <strong>Open Source Developers Community</strong> who live in and around JIIT, Noida, India.
-          </p>
-          </div>
-          ) 
-        }
-      }
+          <strong>Open Source Developers Community</strong> who live in and
+          around JIIT, Noida, India.
+        </p>
+      </div>
+    )
+  }
+}
 export default Bio
