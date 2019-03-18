@@ -144,4 +144,22 @@ on the bottom of your .vimrc, then type <Ctrl-X><Ctrl-O> in insert mode.
     GUIs and other applications can nvim --embed to discover the msgpack API dynamically.
 - Drop-in Vim
     Neovim is an extension of Vim: feature-parity and backwards-compatibility are high priorities. If you already use Vim, see :help nvim-from-vim.
+
+#### Other features
+
+ And below are some of the simple and elegant commands used to indent lines quickly in Vim or gVim.
+
+- ```gg=G```    The master of all commands is. This indents the entire file!
+
+- ```==```      To indent the current line
     
+- ```=G```      To indent the all the lines below the current line
+
+- ```n==```     To indent n lines below the current line
+
+- ```=%```      To indent a block of code, go to one of the braces and use command
+    
+These are the simplest, yet powerful commands to indent multiple lines.
+
+
+#### [CheatSheet](https://vim.rtorr.com/)
