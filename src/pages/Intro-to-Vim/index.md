@@ -41,71 +41,71 @@ Vim is based on text user interface and like other text editors, it also has a G
 
 #### Exiting Vim 
 - In normal mode
-    - ```:q!```             Quit Vim without saving the changes to the file.
+    - ```:q!```               Quit Vim without saving the changes to the file.
     - ```ZQ```                Same as :q! Quits Vim without writing changes
 - Or 
-    - ```Ctrl + z```    To send vim back in background
-    - ``` $fg```        To get back in vim
+    - ```Ctrl + z```          To send vim back in background
+    - ``` $fg```              To get back in vim
 
 #### Save
-- ```:w```                Save the file
-- ```:w new_name```        Save the file with the new_name filename
-- ```:wq```                Save the file and quit Vim.
-- ```ZZ```              Write file, if modified, and quit Vim
+- ```:w```                    Save the file
+- ```:w new_name```           Save the file with the new_name filename
+- ```:wq```                   Save the file and quit Vim.
+- ```ZZ```                    Write file, if modified, and quit Vim
 
 #### Special inserts
-- ```:r [filename]```    Insert the file [filename] below the cursor
-- ```:r ![command]```    Execute [command] and insert its output below the cursor
+- ```:r [filename]```         Insert the file [filename] below the cursor
+- ```:r ![command]```         Execute [command] and insert its output below the cursor
      
 #### Delete text
-- ```x```                                delete the character at cursor
+- ```x```                             delete the character at cursor
 - ```dw```                            delete a word.
-- ```d0```                             delete to the beginning of a line.
-- ```d$```                             delete to the end of a line.
-- ```d)```                              delete to the end of the sentence.
+- ```d0```                            delete to the beginning of a line.
+- ```d$```                            delete to the end of a line.
+- ```d)```                            delete to the end of the sentence.
 - ```dgg```                           delete to the beginning of the file.
-- ```dG```                             delete to the end of the file.
-- ```dd```                             delete line
+- ```dG```                            delete to the end of the file.
+- ```dd```                            delete line
 - ```3dd```                           delete three lines
      
 #### Simple replace text
-- ```r{text}```                     Replace the character under the cursor with {text}
-- ```R```                            Replace characters instead of inserting them
+- ```r{text}```                       Replace the character under the cursor with {text}
+- ```R```                             Replace characters instead of inserting them
      
 #### Copy/Paste text
-- ```yy```                          copy current line into storage buffer
-- ```p```                           paste storage buffer after current line
-- ```P```                           paste storage buffer before current line
+- ```yy```                            copy current line into storage buffer
+- ```p```                             paste storage buffer after current line
+- ```P```                             paste storage buffer before current line
      
 #### Undo/Redo operation
-- ```u```                            undo the last operation.
+- ```u```                             undo the last operation.
 - ```Ctrl+r```                        redo the last undo.
      
 #### Search and Replace keys
-- ```/search_text```                   search document for search_text going forward
-- ```?search_text```                search document for search_text going backwards
-- ```n```                           move to the next instance of the result from the search
-- ```N```                            move to the previous instance of the result
-- ```:%s/original/replacement```    Search for the first occurrence of the string “original” and replace it with “replacement”
+- ```/search_text```                  search document for search_text going forward
+- ```?search_text```                  search document for search_text going backwards
+- ```n```                             move to the next instance of the result from the search
+- ```N```                             move to the previous instance of the result
+- ```:%s/original/replacement```      Search for the first occurrence of the string “original” and replace it with “replacement”
 - ```:%s/original/replacement/g```    Search and replace all occurrences of the string “original” with “replacement”
-- ```:%s/original/replacement/gc```    Search for all occurrences of the string “original” but ask for confirmation before replacing them with “replacement”
+- ```:%s/original/replacement/gc```   Search for all occurrences of the string “original” but ask for confirmation before replacing them with “replacement”
 
 #### Navigation keys
-- ```h```                            moves the cursor one character to the left.
-- ```j or Ctrl + J```               moves the cursor down one line.
-- ```k or Ctrl + P```               moves the cursor up one line.
-- ```l```                           moves the cursor one character to the right.
-- ```0```                           moves the cursor to the beginning of the line.
-- ```$```                           moves the cursor to the end of the line.
-- ```^```                            moves the cursor to the first non-empty character of the line
-- ```w```                           move forward one word (next alphanumeric word)
-- ```W```                           move forward one word (delimited by a white space)
-- ```5w```                          move forward five words
-- ```b```                              move backward one word (previous alphanumeric word)
-- ```B```                              move backward one word (delimited by a white space)
-- ```5b```                          move backward five words
-- ```G```                           move to the end of the file
-- ```gg```                          move to the beginning of the file.
+- ```h```                             moves the cursor one character to the left.
+- ```j or Ctrl + J```                 moves the cursor down one line.
+- ```k or Ctrl + P```                 moves the cursor up one line.
+- ```l```                             moves the cursor one character to the right.
+- ```0```                             moves the cursor to the beginning of the line.
+- ```$```                             moves the cursor to the end of the line.
+- ```^```                             moves the cursor to the first non-empty character of the line
+- ```w```                             move forward one word (next alphanumeric word)
+- ```W```                             move forward one word (delimited by a white space)
+- ```5w```                            move forward five words
+- ```b```                             move backward one word (previous alphanumeric word)
+- ```B```                             move backward one word (delimited by a white space)
+- ```5b```                            move backward five words
+- ```G```                             move to the end of the file
+- ```gg```                            move to the beginning of the file.
 
 #### Modes
 - Normal Mode
