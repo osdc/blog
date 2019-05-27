@@ -2,7 +2,7 @@
 title: "Intro to Vim" 
 date: "2019-01-31T23:46:37.121Z"
 ---
-This blog is about introduction to one of the coolest,highly configurable text editor for effieciently creating and changing any kind of text i.e ```Vim```.
+This blog is about introduction to one of the coolest, highly configurable text editor for efficiently creating and changing any kind of text i.e ```Vim```.
 
 ## Why to use Vim 
 > Learning to drive a car takes effort. 
@@ -24,10 +24,10 @@ This blog is about introduction to one of the coolest,highly configurable text e
 
 ### History
 [Bram Moolenaar](https://en.wikipedia.org/wiki/Bram_Moolenaar) began working on *Vim* in 1988 for a company called [Amiga](https://www.amigaos.net/). He published first public release of Vim in 1991. 
-The name *Vim* is an acronym for **VI improved** becauase *Vim* is an extended version of [vi](https://en.wikipedia.org/wiki/Vi) editor. It was built with an aim of adding some additional features designed to help in source code editing. 
+The name *Vim* is an acronym for **VI improved** because *Vim* is an extended version of [vi](https://en.wikipedia.org/wiki/Vi) editor. It was built with the aim of adding some additional features designed to help in source code editing. 
 
 ### Interface of Vim
-Vim is based on text user interface and like other text editors it also has a GUI mode, [gVim](http://vimdoc.sourceforge.net/htmldoc/gui.html#GUI). Vim has a built-in tutorial for beginners(```vimtutor``` command). Vim also has a built in facility (```:help``` command) which allow user to serach,explore and query commands.
+Vim is based on text user interface and like other text editors, it also has a GUI mode, [gVim](http://vimdoc.sourceforge.net/htmldoc/gui.html#GUI). Vim has a built-in tutorial for beginners(```vimtutor``` command). Vim also has a built-in facility (```:help``` command) which allow the user to search, explore and query commands.
 
 ### A little Walk-through of Vim
 
@@ -41,71 +41,71 @@ Vim is based on text user interface and like other text editors it also has a GU
 
 #### Exiting Vim 
 - In normal mode
-    - ```:q!```             Quit Vim without saving the changes to the file.
-    - ```ZQ```	            Same as :q! Quits Vim without writing changes
+    - ```:q!```               Quit Vim without saving the changes to the file.
+    - ```ZQ```                Same as :q! Quits Vim without writing changes
 - Or 
-    - ```Ctrl + z```    To send vim back in background
-    - ``` $fg```        To get back in vim
+    - ```Ctrl + z```          To send vim back in background
+    - ``` $fg```              To get back in vim
 
 #### Save
-- ```:w```	            Save the file
-- ```:w new_name```	    Save the file with the new_name filename
-- ```:wq```	            Save the file and quit Vim.
-- ```ZZ```      	    Write file, if modified, and quit Vim
+- ```:w```                    Save the file
+- ```:w new_name```           Save the file with the new_name filename
+- ```:wq```                   Save the file and quit Vim.
+- ```ZZ```                    Write file, if modified, and quit Vim
 
 #### Special inserts
-- ```:r [filename]```	Insert the file [filename] below the cursor
-- ```:r ![command]```	Execute [command] and insert its output below the cursor
- 	
+- ```:r [filename]```         Insert the file [filename] below the cursor
+- ```:r ![command]```         Execute [command] and insert its output below the cursor
+     
 #### Delete text
-- ```x```	                        delete character at cursor
-- ```dw```	                        delete a word.
-- ```d0```	                        delete to the beginning of a line.
-- ```d$```	                        delete to the end of a line.
-- ```d)```	                        delete to the end of sentence.
-- ```dgg```	                        delete to the beginning of the file.
-- ```dG```	                        delete to the end of the file.
-- ```dd```	                        delete line
-- ```3dd```	                        delete three lines
- 	
+- ```x```                             delete the character at cursor
+- ```dw```                            delete a word.
+- ```d0```                            delete to the beginning of a line.
+- ```d$```                            delete to the end of a line.
+- ```d)```                            delete to the end of the sentence.
+- ```dgg```                           delete to the beginning of the file.
+- ```dG```                            delete to the end of the file.
+- ```dd```                            delete line
+- ```3dd```                           delete three lines
+     
 #### Simple replace text
-- ```r{text}```     	            Replace the character under the cursor with {text}
-- ```R```	                        Replace characters instead of inserting them
- 	
+- ```r{text}```                       Replace the character under the cursor with {text}
+- ```R```                             Replace characters instead of inserting them
+     
 #### Copy/Paste text
-- ```yy```          	            copy current line into storage buffer
-- ```p```           	            paste storage buffer after current line
-- ```P```           	            paste storage buffer before current line
- 	
+- ```yy```                            copy current line into storage buffer
+- ```p```                             paste storage buffer after current line
+- ```P```                             paste storage buffer before current line
+     
 #### Undo/Redo operation
-- ```u```	                        undo the last operation.
-- ```Ctrl+r```	                    redo the last undo.
- 	
+- ```u```                             undo the last operation.
+- ```Ctrl+r```                        redo the last undo.
+     
 #### Search and Replace keys
-- ```/search_text```   	            search document for search_text going forward
-- ```?search_text```	            search document for search_text going backward
-- ```n```           	            move to the next instance of the result from the search
-- ```N```	                        move to the previous instance of the result
-- ```:%s/original/replacement```	Search for the first occurrence of the string “original” and replace it with “replacement”
-- ```:%s/original/replacement/g```	Search and replace all occurrences of the string “original” with “replacement”
-- ```:%s/original/replacement/gc```	Search for all occurrences of the string “original” but ask for confirmation before replacing them with “replacement”
+- ```/search_text```                  search document for search_text going forward
+- ```?search_text```                  search document for search_text going backwards
+- ```n```                             move to the next instance of the result from the search
+- ```N```                             move to the previous instance of the result
+- ```:%s/original/replacement```      Search for the first occurrence of the string “original” and replace it with “replacement”
+- ```:%s/original/replacement/g```    Search and replace all occurrences of the string “original” with “replacement”
+- ```:%s/original/replacement/gc```   Search for all occurrences of the string “original” but ask for confirmation before replacing them with “replacement”
 
 #### Navigation keys
-- ```h```	                        moves the cursor one character to the left.
-- ```j or Ctrl + J```               moves the cursor down one line.
-- ```k or Ctrl + P```               moves the cursor up one line.
-- ```l```                           moves the cursor one character to the right.
-- ```0```                       	moves the cursor to the beginning of the line.
-- ```$```                       	moves the cursor to the end of the line.
-- ```^```                        	moves the cursor to the first non-empty character of the line
-- ```w```                       	move forward one word (next alphanumeric word)
-- ```W```                       	move forward one word (delimited by a white space)
-- ```5w```                      	move forward five words
-- ```b```                          	move backward one word (previous alphanumeric word)
-- ```B```                          	move backward one word (delimited by a white space)
-- ```5b```                      	move backward five words
-- ```G```                       	move to the end of the file
-- ```gg```                          move to the beginning of the file.
+- ```h```                             moves the cursor one character to the left.
+- ```j or Ctrl + J```                 moves the cursor down one line.
+- ```k or Ctrl + P```                 moves the cursor up one line.
+- ```l```                             moves the cursor one character to the right.
+- ```0```                             moves the cursor to the beginning of the line.
+- ```$```                             moves the cursor to the end of the line.
+- ```^```                             moves the cursor to the first non-empty character of the line
+- ```w```                             move forward one word (next alphanumeric word)
+- ```W```                             move forward one word (delimited by a white space)
+- ```5w```                            move forward five words
+- ```b```                             move backward one word (previous alphanumeric word)
+- ```B```                             move backward one word (delimited by a white space)
+- ```5b```                            move backward five words
+- ```G```                             move to the end of the file
+- ```gg```                            move to the beginning of the file.
 
 #### Modes
 - Normal Mode
@@ -119,7 +119,7 @@ Vim is based on text user interface and like other text editors it also has a GU
 
 
 #### Auto Completion
-You can start from built-in omnifunc setting.
+You can start from a built-in omnifunc setting.
 Just put:
 ```
 filetype plugin on
@@ -153,11 +153,11 @@ on the bottom of your .vimrc, then type <Ctrl-X><Ctrl-O> in insert mode.
 
 - ```==```      To indent the current line
     
-- ```=G```      To indent the all the lines below the current line
+- ```=G```      To indent all the lines below the current line
 
 - ```n==```     To indent n lines below the current line
 
-- ```=%```      To indent a block of code, go to one of the braces and use command
+- ```=%```      To indent a block of code, go to one of the braces and use the command
     
 These are the simplest, yet powerful commands to indent multiple lines.
 

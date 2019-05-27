@@ -3,7 +3,7 @@ title: "Custom Live Ubuntu"
 date: 2018-09-14T18:12:36+05:30
 ---
 
-This blog is about making a live CD/DVD from the main system on your hard drive. This is useful if you want to build a clean live CD, or if you want to build a minimal rescue CD. We used it to create a beginner friendly wargame to introduce **Linux** to everyone. The theme was similar to that of [Bandit](http://overthewire.org/wargames/bandit) with very elementary Linux commands and only 11 levels.
+This blog is about making a live CD/DVD from the main system on your hard drive. This is useful if you want to build a clean live CD, or if you want to build a minimal rescue CD. We used it to create a beginner-friendly wargame to introduce **Linux** to everyone. The theme was similar to that of [Bandit](http://overthewire.org/wargames/bandit) with very elementary Linux commands and only 11 levels.
 
 **If interested, you can download the .iso from [here](https://drive.google.com/open?id=1AkpUmuFQIl4HccCu2H4BLF3XqLJbffUP) and play**
 
@@ -33,13 +33,13 @@ The directory tree of the live CD/DVD we are going to create is going to look li
 |--------md5sum.txt 
 ```
 
-  * `/casper/filesystem.${FORMAT}`: This is the container of the linux filesystem we are going to copy from our hard disk. It is usually a compressed filesystem like squashfs.
+  * `/casper/filesystem.${FORMAT}`: This is the container of the Linux filesystem we are going to copy from our hard disk. It is usually a compressed filesystem like squashfs.
 
   * `/casper/filesystem.manifest`: This file is optional. You only need it if you decide to include the Ubuntu installer in the CD. The purpose of this file will be explained later.
 
   * `/casper/filesystem.manifest-desktop`: This file is optional. You only need it if you decide to include the Ubuntu installer in the CD. The purpose of this file will be explained later.
 
-  * `/casper/vmlinuz`: The linux kernel. This is copied form the linux filesystem.
+  * `/casper/vmlinuz`: The Linux kernel. This is copied from the Linux filesystem.
 
   * `/casper/initrd.img`: the initramfs that contain the customizations necessary for the live CD/DVD.
 
@@ -59,13 +59,13 @@ The directory tree of the live CD/DVD we are going to create is going to look li
 #### Preparing the Environment ####
   * Set some variables
 
-	```
-	export WORK=~/work
-	export CD=~/cd
-	export FORMAT=squashfs
-	export FS_DIR=casper
-	```
-	The WORK Directory is where our temporary files and mount point will reside. The CD is the location of the CD tree. FORMAT is the filesystem type. We are going to use a compressed squashfs. FS_DIR is the location of the actual filesystem image within the cd tree. 
+    ```
+    export WORK=~/work
+    export CD=~/cd
+    export FORMAT=squashfs
+    export FS_DIR=casper
+    ```
+    The WORK Directory is where our temporary files and mount point will reside. The CD is the location of the CD tree. FORMAT is the filesystem type. We are going to use compressed squashfs. FS_DIR is the location of the actual filesystem image within the cd tree. 
   * Create the CD and WORK Directory Structure
 
   ```
@@ -81,19 +81,19 @@ The directory tree of the live CD/DVD we are going to create is going to look li
  
 #### Preparing your new filesystem ####
 
-	
-	mkdir ${WORK}/rootfs	
-	sudo debootstrap --include grub-pc,locales --arch amd64 bionic ${WORK}/rootfs http://archive.ubuntu.com/ubuntu
-	
+    
+    mkdir ${WORK}/rootfs    
+    sudo debootstrap --include grub-pc,locales --arch amd64 bionic ${WORK}/rootfs http://archive.ubuntu.com/ubuntu
+    
 Here, debootstrap will download, extract and install the base system packages to our target directory. Debootstrap only fetches the base system without a kernel or bootloader, so we'll use the `--include` option to fetch those too. If you need packages not found in the main repository, you can include packages from contrib and non-free with this option `--components` main, contrib, non-free
 
 `Usage: debootstrap --include <additional_packages,comma-separated> --arch <architecture> <release> <target> <mirror>`
 
-Next we'll enter the chroot environment for a moment to complete the second stage of the install.
-```	
-	sudo chroot ${WORK}/rootfs /bin/bash
-	debootstrap --second-stage
-	exit
+Next, we'll enter the chroot environment for a moment to complete the second stage of the install.
+```    
+    sudo chroot ${WORK}/rootfs /bin/bash
+    debootstrap --second-stage
+    exit
 ```
 
 ##### Preparing the chroot environment #####
@@ -122,7 +122,7 @@ Install packages essential for LIVE CD
 apt-get install casper lupin-casper
 ```
 
-Now let's give your new install a name. If not, your new install won't have a name, or inherit the name of the host you are installing from and also configure it's locale
+Now let's give your new install a name. If not, your new install won't have a name, or inherit the name of the host you are installing from and also configure its locale
 
 ```
 echo "<name-your-host>" > /etc/hostname
@@ -141,38 +141,38 @@ apt-get update && apt-get upgrade
 #### Prepare the CD directory Structure ####
   * Copy the kernel, the updated initrd and memtest prepared in the chroot:
 
-	  ```
-	  export kversion=`cd ${WORK}/rootfs/boot && ls -1 vmlinuz-* | tail -1 | sed 's@vmlinuz-@@'`
-	  sudo cp -vp ${WORK}/rootfs/boot/vmlinuz-${kversion} ${CD}/${FS_DIR}/vmlinuz
-	  sudo cp -vp ${WORK}/rootfs/boot/initrd.img-${kversion} ${CD}/${FS_DIR}/initrd.img
-	  sudo cp -vp ${WORK}/rootfs/boot/memtest86+.bin ${CD}/boot
-	  ```
+      ```
+      export kversion=`cd ${WORK}/rootfs/boot && ls -1 vmlinuz-* | tail -1 | sed 's@vmlinuz-@@'`
+      sudo cp -vp ${WORK}/rootfs/boot/vmlinuz-${kversion} ${CD}/${FS_DIR}/vmlinuz
+      sudo cp -vp ${WORK}/rootfs/boot/initrd.img-${kversion} ${CD}/${FS_DIR}/initrd.img
+      sudo cp -vp ${WORK}/rootfs/boot/memtest86+.bin ${CD}/boot
+      ```
 
   * Unmount bind mounted dirs:
 
-	  ```
-	  sudo umount ${WORK}/rootfs/proc
-	  sudo umount ${WORK}/rootfs/sys
-	  sudo umount ${WORK}/rootfs/dev
+      ```
+      sudo umount ${WORK}/rootfs/proc
+      sudo umount ${WORK}/rootfs/sys
+      sudo umount ${WORK}/rootfs/dev
       ```
 
   * Convert the directory tree into a squashfs: 
 
-	  ```
-	  sudo mksquashfs ${WORK}/rootfs ${CD}/${FS_DIR}/filesystem.${FORMAT} -noappend
-	  ```
+      ```
+      sudo mksquashfs ${WORK}/rootfs ${CD}/${FS_DIR}/filesystem.${FORMAT} -noappend
+      ```
   *Note: Make sure the resulting file size can fit into your live media.*
   * Make filesystem.size 
 
-	  ```
-	  echo -n $(sudo du -s --block-size=1 ${WORK}/rootfs | tail -1 | awk '{print $1}') | sudo tee ${CD}/${FS_DIR}/filesystem.size
+      ```
+      echo -n $(sudo du -s --block-size=1 ${WORK}/rootfs | tail -1 | awk '{print $1}') | sudo tee ${CD}/${FS_DIR}/filesystem.size
       ```
 
   * Calculate MD5 
 
-	  ```
-	  find ${CD} -type f -print0 | xargs -0 md5sum | sed "s@${CD}@.@" | grep -v md5sum.txt | sudo tee -a ${CD}/md5sum.txt
-	  ```
+      ```
+      find ${CD} -type f -print0 | xargs -0 md5sum | sed "s@${CD}@.@" | grep -v md5sum.txt | sudo tee -a ${CD}/md5sum.txt
+      ```
 
   * Make Grub the bootloader of the CD Make the grub.cfg 
 
@@ -183,49 +183,49 @@ apt-get update && apt-get upgrade
 Copy the following text into it and save it. 
 
 ```
-	  set default="0"
-	  set timeout=10
+      set default="0"
+      set timeout=10
 
-	  menuentry "Ubuntu" {
-	  linux /casper/vmlinuz boot=casper quiet splash
-	  initrd /casper/initrd.img
-	  }
+      menuentry "Ubuntu" {
+      linux /casper/vmlinuz boot=casper quiet splash
+      initrd /casper/initrd.img
+      }
 
-	  menuentry "Ubuntu in safe mode" {
-	  linux /casper/vmlinuz boot=casper xforcevesa quiet splash
-	  initrd /casper/initrd.img
-	  }
+      menuentry "Ubuntu in safe mode" {
+      linux /casper/vmlinuz boot=casper xforcevesa quiet splash
+      initrd /casper/initrd.img
+      }
 
-	  menuentry "Ubuntu CLI" {
-	  linux /casper/vmlinuz boot=casper textonly quiet splash
-	  initrd /casper/initrd.img
-	  }
+      menuentry "Ubuntu CLI" {
+      linux /casper/vmlinuz boot=casper textonly quiet splash
+      initrd /casper/initrd.img
+      }
 
-	  menuentry "Ubuntu GUI from RAM" {
-	  linux /casper/vmlinuz boot=casper toram quiet splash
-	  initrd /casper/initrd.img
-	  }
+      menuentry "Ubuntu GUI from RAM" {
+      linux /casper/vmlinuz boot=casper toram quiet splash
+      initrd /casper/initrd.img
+      }
 
-	  menuentry "Check Disk for Defects" {
-	  linux /casper/vmlinuz boot=casper integrity-check quiet splash
-	  initrd /casper/initrd.img
-	  }
+      menuentry "Check Disk for Defects" {
+      linux /casper/vmlinuz boot=casper integrity-check quiet splash
+      initrd /casper/initrd.img
+      }
 
-	  menuentry "Memory Test" {
-	  linux16 /boot/memtest86+.bin
-	  }
+      menuentry "Memory Test" {
+      linux16 /boot/memtest86+.bin
+      }
 
-	  menuentry "Boot from the first hard disk" {
-	  set root=(hd0)
-	  chainloader +1
-	  }
+      menuentry "Boot from the first hard disk" {
+      set root=(hd0)
+      chainloader +1
+      }
 ```
 
 #### Build the LIVE CD ####
 Make the .iso file
 
 ```
-	sudo grub-mkrescue -o ~/live-cd.iso ${CD}
+    sudo grub-mkrescue -o ~/live-cd.iso ${CD}
 ```
 
 Now it's ready to be made bootable from any device.
