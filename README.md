@@ -35,5 +35,16 @@ Below this, add your article's text in Markdown!
 
 After you have written the article, submit a new [Pull Request](https://github.com/osdc/blog/pull/new/master).
 
+## Useful commands
+
+Lint the project
+
+`$ npm run lint`
+
+
+Deploy the blog
+`$ npm run deploy`
+
+
 ## License
 Please see the [LICENSE](LICENSE) file for details
