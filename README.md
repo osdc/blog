@@ -1,5 +1,5 @@
 <div align="center">
-	<img height="250" src="./public/static/osdc.c802ef41.png" alt="osdc logo">
+	<img height="250" src="./src/components/osdc.png" alt="osdc logo">
 	<h1><b>OSDC Blog</b></h1>
 	<p><b>The official open source developers blog - See it Live at <a href="https://osdc.github.io/blog/">https://osdc.github.io/blog/</a></b></p>
 	</br>
