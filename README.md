@@ -11,7 +11,7 @@ First clone the project
 
 `$ git clone https://github.com/osdc/blog.git osdc-blog`
 
-Next install the dependencies and run the project. If you get any problems whilst installing, please make sure you are using Node Version 10 or below
+Next install the dependencies and run the project. If you get any problems whilst installing, please make sure you are using Node Version 10 or above
 `$ npm install && npm run dev`
 
 When you make changes to the code, the blog will automatically update.
