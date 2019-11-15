@@ -38,7 +38,7 @@ There was even a dedicated section that listed beginner-friendly projects.
 I quickly went through the list and found some easy projects then and
 there only. 
 I started working on the projects and finished them as quickly as I could.
-Having made four PRs, I was quite content and satisfied but I never
+Having made four PRs, I was quite contented and satisfied but I never
 knew that it's not as easy as it seems.
 In the greed of completing the challenge
 and claiming my t-shirt, I had made one useless PR and it was 
