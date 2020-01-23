@@ -1,6 +1,7 @@
 ---
 title: Wanna Play Linux Meetup
 date: "2018-09-20T23:46:37.121Z"
+description:
 ---
 
 > One OS to rule them all,  
@@ -8,7 +9,7 @@ date: "2018-09-20T23:46:37.121Z"
 > One OS to call them all,  
 > And in salvation bind them.  
 > In the bright land of Linux,  
-> Where the hackers play.  
+> Where the hackers play.
 
 These magnificent lines by J.Scott Thayer themselves exhibit the power and superiority of Linux over other pieces of softwares or to be more precise, kernels. Therefore, to provide the community members with an introduction to the Linux command line and the various basic commands of Linux, OSDC organized the "Wanna-Play-Linux Meetup" on 30th August 2018.
 
@@ -18,6 +19,6 @@ Bringing their hacking skills to the forefront, everyone and even the newcomers 
 
 This wargame simulation was followed by a QnA session in which the community members clarified their various doubts regarding using Linux and its distros. The meetup finally ended with a lot of awesome stuff learnt and done.
 
-* Want to know how to create a customised live disk? Read this awesome blogpost [Custom Live Ubuntu](https://osdc.github.io/blog/custom-ubuntu-live-cd/).
+- Want to know how to create a customised live disk? Read this awesome blogpost [Custom Live Ubuntu](https://osdc.github.io/blog/custom-ubuntu-live-cd/).
 
-* Other resources of this meetup can be found [here](https://github.com/osdc/meetups).
+- Other resources of this meetup can be found [here](https://github.com/osdc/meetups).

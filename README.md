@@ -7,6 +7,7 @@
 </div>
 
 ## Getting Started
+
 First clone the project
 
 `$ git clone https://github.com/osdc/blog.git osdc-blog`
@@ -17,6 +18,7 @@ Next install the dependencies and run the project. If you get any problems whils
 When you make changes to the code, the blog will automatically update.
 
 ## Writing an Article
+
 To write an article create a new folder that you want to be the URL slug of the blog post in `/src/pages/`
 For example for a blog with the url `https://osdc.github.io/blog/hello-world`
 
@@ -41,10 +43,9 @@ Lint the project
 
 `$ npm run lint`
 
-
 Deploy the blog
 `$ npm run deploy`
 
-
 ## License
-Please see the [LICENSE](LICENSE) file for details
+
+Please see the [LICENSE](LICENSE) file for details.
