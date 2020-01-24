@@ -1,5 +1,5 @@
 <div align="center">
-	<img height="250" src="./src/components/osdc.png" alt="osdc logo">
+	<img height="250" src="./content/assets/osdc.png" alt="osdc logo">
 	<h1><b>OSDC Blog</b></h1>
 	<p><b>The official open source developers blog - See it Live at <a href="https://osdcblog.netlify.com">https://osdcblog.netlify.com</a></b></p>
 	</br>
