@@ -6,6 +6,8 @@
 	</br>
 </div>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d81a6ab2-3225-4155-ae50-b2ceb85d8b48/deploy-status)](https://app.netlify.com/sites/osdcblog/deploys)
+
 ## Getting Started
 
 First clone the project
